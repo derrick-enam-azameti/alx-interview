@@ -1,18 +1,20 @@
 #!/usr/bin/python3
 """
-Function to generate Pascal's triangle up to the nth level.
+0. Pascal's Triangle
 """
 
 
 def pascal_triangle(n):
-    """Generate Pascal's triangle up to the specified number of rows, n."""
-    triangle = []
+    """Create a function def pascal_triangle(n): that returns a list of lists
+    of integers representing the Pascal’s triangle of n
+    """
+    res = []
     if n > 0:
-        for current_row in range(1, n + 1):
-            row_values = []
-            coefficient = 1
-            for position in range(1, current_row + 1):
-                row_values.append(coefficient)
-                coefficient = coefficient * (current_row - position) // position
-            triangle.append(row_values)
-    return triangle
+        for x in range(1, n + 1):
+            level = []
+            R = 1
+            for y in range(1, x + 1):
+                level.append(R)
+                R = R * (x - y) // y
+            res.append(level)
+    return res
