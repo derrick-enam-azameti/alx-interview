@@ -7,6 +7,7 @@ Returns:
     Returns an empty list if n <= 0.
 """
 
+
 def pascal_triangle(n):
     """
     Generates Pascal's triangle up to the nth row.
@@ -17,11 +18,10 @@ def pascal_triangle(n):
     Returns:
         list of lists: Shows integers representing Pascal's triangle.
     """
-
     if n <= 0:
         return []
 
-    res = [[1]]  # Initialize the first row of Pascal's triangle
+    res = [[1]]  # Initialize the first row
 
     # Generate rows for Pascal's triangle
     for i in range(1, n):
@@ -37,5 +37,4 @@ def pascal_triangle(n):
 
         # Append the row to the result
         res.append(row)
-    
     return res
