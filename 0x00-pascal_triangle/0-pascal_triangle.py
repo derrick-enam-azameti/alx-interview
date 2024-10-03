@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+Function to generate Pascal's triangle up to the nth level.
+
+Returns:
+    A list of lists, where each inner list represents a level of Pascal's triangle.
+    Returns an empty list if n <= 0.
+"""
 
 def pascal_triangle(n):
     """
