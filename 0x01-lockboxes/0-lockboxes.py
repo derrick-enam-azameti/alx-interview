@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 """Solves the lock boxes puzzle
-The lock boxes puzzle involves determining if all boxes can be opened. 
+The lock boxes puzzle involves determining if all boxes can be opened.
 Each box contains keys that may unlock other boxes.
 """
 
 
 def look_next_opened_box(opened_boxes):
 	"""Searches for the next box that has been opened but not yet checked.
-	This function iterates over opened boxes to find the next one that 
-	hasn't been processed (i.e., "opened" but not "opened/checked"). 
+	This function iterates over opened boxes to find the next one that
+	hasn't been processed (i.e., "opened" but not "opened/checked").
 	It returns the list of keys from that box and marks the box as checked.
 	Args:
-		opened_boxes (dict): A dictionary that tracks which boxes have been opened 
+		opened_boxes (dict): A dictionary that tracks which boxes have been opened
 							and their corresponding keys.
 
 	Returns:
@@ -28,12 +28,12 @@ def look_next_opened_box(opened_boxes):
 
 def canUnlockAll(boxes):
 	"""Determines if all boxes can be unlocked starting from the first box.
-	This function checks if all boxes in the list can be unlocked using the keys 
-	found within them. The first box is always unlocked, and subsequent boxes 
+	This function checks if all boxes in the list can be unlocked using the keys
+	found within them. The first box is always unlocked, and subsequent boxes
 	can only be unlocked if the keys to those boxes are found.
 	Args:
 		boxes (list): A list of lists where each inner list contains keys to unlock other boxes.
-					  The index of the outer list represents the box number, and the keys 
+					  The index of the outer list represents the box number, and the keys
 					  inside it represent the keys for other boxes.
 
 	Returns:
